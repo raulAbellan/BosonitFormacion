@@ -1,0 +1,52 @@
+#main {
+    display: block;
+}
+
+#main-section {
+    background-color: rgb(0, 0, 0);
+}
+
+#title {
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#img-div {
+    max-width: 50rem;
+    display: grid;
+    margin: auto;
+    align-items: center;
+}
+
+
+#image {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+
+}
+
+#img-caption {
+    display: block;
+    margin: auto;
+}
+
+#tribute-info {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-style: italic;
+}
+
+#list {
+    list-style: none;
+
+}
+.text-info{
+    color: rgb(1, 2, 1);
+    text-align: center;
+    background-color: rgb(187, 191, 211);
+}

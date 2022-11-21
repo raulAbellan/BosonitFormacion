@@ -147,53 +147,10 @@ function fromBytesToFormattedSizeUnits(bytes, decimals = 3) {
     return bytes;
   }
 
+}
 
-}
-function fromBytesToFormattedSizeUnits2(bytes, decimals = 3) {
-  switch (bytes) {
-    case bytes >= 1000000000000000000000000 || bytes <= -1000000000000000000000000:
-      bytes = (bytes / 1000000000000000000000000).toPrecision(decimals) + "YB"
-      break;
-    case bytes >= 1000000000000000000000 || bytes <= -1000000000000000000000:
-      bytes = (bytes / 1000000000000000000000).toPrecision(decimals) + "ZB"
-      break;
-    case bytes >= 1000000000000000000 || bytes <= -1000000000000000000:
-      bytes = (bytes / 1000000000000000000).toPrecision(decimals) + "EB"
-      break;
-    case bytes >= 1000000000000000 || bytes <= -1000000000000000:
-      bytes = (bytes / 1000000000000000).toPrecision(decimals) + "PB"
-      break;
-    case bytes >= 1000000000000 || bytes <= -1000000000000:
-      bytes = (bytes / 1000000000000).toPrecision(decimals) + "TB"
-      break;
-    case bytes >= 1000000000 || bytes <= -1000000000:
-      bytes = (bytes / 1000000000).toPrecision(decimals) + " GB"
-      break;
-    case bytes >= 1000000 || bytes <= -1000000:
-      bytes = (bytes / 1000000).toPrecision(decimals) + " MB"
-      break;
-    case bytes >= 1000 || bytes <= -1000:
-      bytes = (bytes / 1000).toPrecision(decimals) + " KB"
-      break;
-    case bytes > 1 || bytes < -1:
-      bytes = bytes + " B"
-      break;
-    case bytes == 1 || bytes == -1:
-      bytes = bytes + " B"
-      break;
-    case bytes == 0:
-      bytes = "0 B"
-      break;
-    case bytes == -1:
-      bytes = bytes + " B"
-      break;
-    default:
-      console.log("introduce un valor numérico");
-      break;
-  }
-}
 //Ejemplo de uso de la función:
-const result2 = fromBytesToFormattedSizeUnits2(1000);
+const result2 = fromBytesToFormattedSizeUnits(1000);
 console.log(result2); // 1KB
 
 const result3 = fromBytesToFormattedSizeUnits(123456789);

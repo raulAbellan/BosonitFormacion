@@ -182,3 +182,34 @@ console.log(myObjLowercase); // { name: 'Charles', address: 'Home Street' }
 
 
 
+// Ejercicio 10
+// Crea una función que elimine las etiquetas html o xml de un string.
+// La función debe tener un string como único parámetro.
+// Ejemplo de uso de la función:
+
+function removeHTMLTags(html){
+ return html.replace(/<[^>]*>?/gm, '');
+}
+const result5 = removeHTMLTags('<div><span>lorem</span> <strong>ipsum</strong></div>');
+ 
+console.log(result5); // lorem ipsum
+
+// *Ejercicio 11
+// Crea una función que tome un array como parametro y lo divida en arrays nuevos con tantos elementos como sean especificados.
+// La función debe tener dos parámetros:
+// El primer parámetro es el array entero que se quiere dividir.
+// El segundo parámetro es el número de elementos que deben tener los arrays en los que se divida el array original del primer parámetro.
+// Ejemplo de uso de la función:
+function splitArrayIntoChunks(arr, n){
+  const newArr = [];
+  for (let i = 0; i < arr.length; i += n) {
+      const chunk = arr.slice(i, i + n);
+      newArr.push(chunk);
+  }
+  return newArr;
+}
+
+const result6 = splitArrayIntoChunks([1, 2, 3, 4, 5, 6, 7], 3);
+console.log(result6); // [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7 ] ]
+
+

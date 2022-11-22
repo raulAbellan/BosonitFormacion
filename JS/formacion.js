@@ -71,7 +71,8 @@ console.log(notCapitalCities);
 // Ejemplo de uso de la función:
 
 function roundTo(num, decimals) {
-  let sign = (num >= 0 ? 1 : -1);
+  //?Usar constantes en lugar de mutar variables
+  let sign = num >= 0 ? 1 : -1;
   num = num * sign;
   if (decimals === 0) //con 0 decimals
     return sign * Math.round(num);
@@ -98,14 +99,15 @@ console.log(roundedResult2); // 1.123457
 //Ejemplo de uso de la función:
 
 const returnFalsyValues = (obj, funct) => {
-
+    //? operaciones para no mutar el array: const item = ['uso1',2].pop()
   //Creamos un objeto nuevo en el que almacenar las claves y valores
   const newObj = {};
 
   //creamos una constante para almacenar las claves
+  //?map en lugar de for
   const keys = Object.keys(obj);
 
-  //recorremos las claves
+  //?recorremos las claves
   for (let i = 0; i < keys.length; i++) {
 
     if (!funct(obj[keys[i]])) {
@@ -202,14 +204,14 @@ console.log(result5); // lorem ipsum
 // Ejemplo de uso de la función:
 function splitArrayIntoChunks(arr, n){
   const newArr = [];
-  for (let i = 0; i < arr.length; i += n) {
+  for (let i = 0; i < arr.length; i +=n) {
       const chunk = arr.slice(i, i + n);
       newArr.push(chunk);
   }
   return newArr;
 }
 
-const result6 = splitArrayIntoChunks([1, 2, 3, 4, 5, 6, 7], 3);
+const result6 = splitArrayIntoChunks([1, 2, 3, 4, 5, 6, 7], 4);
 console.log(result6); // [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7 ] ]
 
 

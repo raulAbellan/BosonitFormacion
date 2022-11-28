@@ -22,8 +22,5 @@ export class MainPageComponent {
     // this.personajes.push(pers)
   }
 
-  constructor(){
-  }
-
 
 }

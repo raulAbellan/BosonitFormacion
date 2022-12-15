@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="center-align">Alpha Code</th>
+            <th class="center-align">Bandera</th>
+            <th>Nombre</th>
+            <th>Capital</th>
+            <th class="center-align">Población</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pais of paises" [routerLink]="['/pais', pais.cca2]">
+            <td class="center-align">{{pais.cca2}}</td>
+            <td class="center-align"><img src="{{pais.flags.png}}"
+                    alt="Bandera de {{pais.translations['spa']['common']}}"></td>
+            <td>{{pais.translations['spa']['common']}}</td>
+            <td>{{pais.capital}}</td>
+            <td class="center-align">{{pais.population | number }}</td>
+            
+        </tr>
+    </tbody>
+</table>

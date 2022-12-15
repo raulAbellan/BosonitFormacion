@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class PorRegionComponent {
 
+  regiones: string[] = ['EU', 'EFTA', 'CARICOM', 'PA', 'AU', 'USAN', 'EEU', 'AL', 'ASEAN', 'CAIS', 'CEFTA', 'NAFTA', 'SAARC',];
+  regionActiva: string = '';
+  constructor() { }
+  activarRegion(region: string) {
+    this.regionActiva = region;
+    //TODO hacer la llamada al servicio
+  }
 }

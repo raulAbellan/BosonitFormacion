@@ -1,0 +1,278 @@
+body {
+    font-family: 'Hind', sans-serif;
+    font-size: 1.8rem;
+    color: #f0f0f0;
+    background-color: #1b1c20;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.link-nav:hover {
+    background-color: #2d1963;
+}
+
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #36a6c2;
+    font-size: 2.2rem;
+    top: 0;
+    left: 0;
+
+
+}
+
+.link-nav {
+    position: relative;
+    padding: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+
+
+}
+
+.projects {
+    background-color: #3c4452;
+    padding-left: 3.5rem;
+}
+
+#welcome-section {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18rem;
+    margin-bottom: 13rem;
+    text-align: center;
+
+}
+
+#cl-bg {
+    margin-bottom: 0;
+}
+
+#cl-sm {
+    margin-top: 0;
+    color: #36a6c2;
+    font-weight: 100;
+    font-size: 2rem;
+    font-style: italic;
+
+}
+
+.header-pro {
+    text-align: center;
+    margin-bottom: 0px;
+}
+.hr-decoration{
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+
+.grid-proyects {
+    width: 100%;
+    display: grid;
+    gap: 3.5rem;
+    grid-template-columns: repeat(3, 29%);
+    grid-template-rows: repeat(2, 45%);
+}
+
+
+.project:hover .foot-cod {
+
+    color: #36a6c2;
+
+}
+
+.foot-cod {
+
+    color: transparent;
+}
+
+.foot-cod:hover {
+    color: #36a6c2;
+
+}
+
+.project {
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #1b1c20;
+    margin-top: 0;
+    color: #f0f0f0;
+
+}
+
+.img-pr {
+    height: 70%;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.btn {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.btn-show-all {
+
+    color: #f0f0f0;
+    background-color: #1b1c20;
+    width: 10rem;
+    height: 3.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 8%;
+}
+
+.next {
+    color: #1b1c20;
+    background-color:#36a6c2;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 50%;
+
+}
+.btn-show-all:hover{
+    background-color: #36a6c2;
+    color: #1b1c20;
+}
+
+.btn-show-all:hover .next {
+    background-color: #1b1c20;
+    color:#36a6c2;
+    border-radius: 50%;
+
+}
+
+.dotting {
+    display: inline-block;
+    width: 10px;
+    min-height: 2px;
+    padding-right: 2px;
+    border-left: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    background-color: currentColor;
+    background-clip: content-box;
+    box-sizing: border-box;
+    -webkit-animation: dot 4s infinite step-start both;
+    animation: dot 4s infinite step-start both;
+}
+
+.dotting:before {
+    content: '...';
+}
+
+/* IE8 */
+.dotting::before {
+    content: '';
+}
+
+:root .dotting {
+    margin-left: 2px;
+    padding-left: 2px;
+}
+
+/* IE9+ */
+
+@-webkit-keyframes dot {
+    25% {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    50% {
+        border-right-color: transparent;
+        background-color: transparent;
+    }
+
+    75% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes dot {
+    25% {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    50% {
+        border-right-color: transparent;
+        background-color: transparent;
+    }
+
+    75% {
+        border-right-color: transparent;
+    }
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.work-txt{
+    text-align: center;
+}
+.contact-links{
+    display: flex;
+    justify-content: center;
+}
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    border-top: 4px solid #36a6c2;
+}
+footer a{
+    text-decoration: none;
+    color: #36a6c2;
+}
+.footer-text{
+    display: flex;
+    justify-content: space-around;
+}

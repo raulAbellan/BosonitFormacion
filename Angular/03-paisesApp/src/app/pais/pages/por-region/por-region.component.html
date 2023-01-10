@@ -11,5 +11,26 @@
             {{region}}
         </button>
     </div>
-
 </div>
+<table class="table table-hover"*ngIf="paises.length > 0">
+    <thead>
+        <tr>
+            <th class="center-align">Alpha Code</th>
+            <th class="center-align">Bandera</th>
+            <th>Nombre</th>
+            <th>Capital</th>
+            <th class="center-align">Población</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pais of paises" [routerLink]="['/pais', pais.altSpellings[0]]">
+            <td class="center-align">{{pais.altSpellings[0]}}</td>
+            <td class="center-align"><img src="{{pais.flags.svg}}"
+                    alt="Bandera de {{pais.translations['es']}}"></td>
+            <td>{{pais.translations['es']}}</td>
+            <td>{{pais.capital}}</td>
+            <td class="center-align">{{pais.population | number }}</td>
+            
+        </tr>
+    </tbody>
+</table>

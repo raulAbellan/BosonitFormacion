@@ -4,3 +4,7 @@ img{
 .center-align{
     text-align: center
 }
+a{
+    cursor: pointer;
+    text-decoration: none;
+}

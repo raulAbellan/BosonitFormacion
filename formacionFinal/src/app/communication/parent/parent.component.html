@@ -1,0 +1,10 @@
+<p-card> <h3>PARENT</h3><span>message:{{childMessage}} </span>
+    <br>
+
+    
+    <p-button (click)="parentServiceMsg()">Use Service</p-button>
+    <p-button (click)="inputMsg()">Use Input Property</p-button>
+    <p-button (click)="observableMsg()">Use Observable</p-button>
+                <!-- LLamamos al input "msg" en el app child y lo igualamos al parenMessage -->
+    <p-card> <app-child [msg]="parentMessage"  (childMsg)="getChildMsg($event)"></app-child></p-card>
+</p-card>

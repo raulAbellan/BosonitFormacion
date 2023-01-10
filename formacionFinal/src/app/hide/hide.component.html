@@ -1,0 +1,11 @@
+
+<p>
+    <p-button (click)="buttonBoolean()" class="btn btn-primary" type="button">
+       <span >{{button ? 'Enseñar' : 'Esconder'}}</span> </p-button>
+</p>
+<div *ngIf="!button" style="min-height: 120px;">
+    <div >
+        <img src="https://magazine.odroid.com/wp-content/uploads/Coding-Camp-Figure-0-Hello-World-678x381.jpg"
+             alt="Hello World">
+
+    </div>

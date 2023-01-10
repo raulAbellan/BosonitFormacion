@@ -11,7 +11,7 @@
     <tbody>
         <tr *ngFor="let pais of paises" [routerLink]="['/pais', pais.cca2]">
             <td class="center-align">{{pais.cca2}}</td>
-            <td class="center-align"><img src="{{pais.flags.png}}"
+            <td class="center-align"><img src="{{pais.flags.svg}}"
                     alt="Bandera de {{pais.translations['spa']['common']}}"></td>
             <td>{{pais.translations['spa']['common']}}</td>
             <td>{{pais.capital}}</td>

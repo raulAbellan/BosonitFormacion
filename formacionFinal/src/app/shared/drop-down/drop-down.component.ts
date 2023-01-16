@@ -23,6 +23,11 @@ ngOnInit(): void  {
         {
           label: 'Communication',
           routerLink:'communication'
+        }
+        ,
+        {
+          label: 'Crud',
+          routerLink:'crud'
         }]
     }
   ]

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,11 +14,20 @@ import { CommunicationComponent } from './communication/communication.component'
 import { ParentComponent } from './communication/parent/parent.component';
 import { ChildComponent } from './communication/child/child.component';
 
+import { CrudComponent } from './crud/crud.component';
+
 //primeNg
 import { MenubarModule } from 'primeng/menubar';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
-import { CrudComponent } from './crud/crud.component';
+import {PasswordModule} from 'primeng/password';
+import {CheckboxModule} from 'primeng/checkbox';
+import {TreeSelectModule} from 'primeng/treeselect';
+import {DropdownModule} from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TableModule} from 'primeng/table';
+import { ListComponent } from './crud/list/list.component';
+import { FormComponent } from './crud/form/form.component';
 
 
 @NgModule({
@@ -28,14 +38,25 @@ import { CrudComponent } from './crud/crud.component';
     CommunicationComponent,
     ParentComponent,
     ChildComponent,
-    CrudComponent
+    CrudComponent,
+    ListComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MenubarModule,
     ButtonModule,
-    CardModule
+    CardModule,
+    PasswordModule,
+    FormsModule,
+    CheckboxModule,
+    TreeSelectModule,
+    DropdownModule,
+    BrowserAnimationsModule,
+    TableModule,
+    ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

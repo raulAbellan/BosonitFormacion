@@ -6,5 +6,5 @@
     <p-button (click)="inputMsg()">Use Input Property</p-button>
     <p-button (click)="observableMsg()">Use Observable</p-button>
                 <!-- LLamamos al input "msg" en el app child y lo igualamos al parenMessage -->
-    <p-card> <app-child [msg]="parentMessage"  (childMsg)="getChildMsg($event)"></app-child></p-card>
+    <p-card class="mt-3"> <app-child [msg]="parentMessage"  (childMsg)="getChildMsg($event)"></app-child></p-card>
 </p-card>

@@ -1,0 +1,28 @@
+
+<p-table [value]="userArr" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre de Usuario</th>
+            <th>Correo</th>
+            <th>Suscrito</th>
+            <th>Pais</th>
+            <th>Ciudad</th>
+            <th>Acciones</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+        <tr >
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td *ngIf="user.check" ><i class="pi pi-check"></i></td>
+            <td *ngIf="!user.check"></td>
+            <td>{{user.country}}</td>
+            <td>{{user.city}}</td>
+            <td><button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-text"></button>
+
+                
+
+                <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text" click="onDelete"></button>            </td>
+        </tr>
+    </ng-template>
+</p-table>

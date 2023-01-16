@@ -1,0 +1,51 @@
+<div class="gridLateral">
+    <p-card>
+        <h4>Formulario de Registro</h4>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div>
+                <h5>Usuario</h5>
+
+                <div>
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input formControlName="name" type="text" pInputText placeholder=" Nombre de usuario">
+                    </div>
+                </div>
+
+                <h5>Contraseña</h5>
+                <div>
+
+                    <p-password [toggleMask]="true" formControlName="pass"></p-password>
+                </div>
+                <div>
+
+                    <h5>Confirmar Contraseña</h5>
+                    <p-password [toggleMask]="true" formControlName="passConfirm"></p-password>
+                </div>
+                
+                <h5>Correo</h5>
+
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-at"></i></span>
+                    <input formControlName="email" type="text" pInputText placeholder=" Correo" >
+                </div>
+
+                <h5>Envíame ofertas promocionales</h5>
+                <p-checkbox formControlName="check" name="groupname" value="false" ></p-checkbox>
+                <h5>País</h5>
+                <p-dropdown [options]="countries" formControlName="country" optionLabel="name" optionValue="name" placeholder="Pais"></p-dropdown>
+
+                <h5>Ciudad</h5>
+                <div>
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-building"></i></span>
+                        <input formControlName="city" type="text" pInputText placeholder="Ciudad">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-1"> <p-button label="Crear" (click)="onSubmit()"></p-button>
+            </div>
+        </form>
+
+    </p-card>
+</div>

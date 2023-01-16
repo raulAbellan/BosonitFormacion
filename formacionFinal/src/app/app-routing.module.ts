@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HideComponent } from './hide/hide.component';
 import { CommunicationComponent } from './communication/communication.component';
+import { CrudComponent } from './crud/crud.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,11 @@ const routes: Routes = [
   {
     path: 'communication',
     component:CommunicationComponent,
+    pathMatch:'full'
+  },
+  {
+    path: 'crud',
+    component:CrudComponent,
     pathMatch:'full'
   },
   {

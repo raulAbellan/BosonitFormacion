@@ -8,14 +8,16 @@ import { User } from 'src/app/Interfaces';
 export class UserService {
   private users: User [];
   private users$: Subject<User[]>
-
+  private id: number = 0;
   constructor() {
     this.users = [];
     this.users$ = new Subject;
    }
 
  addUser(uUser: User){
+  uUser.id = this.id;
   this.users.push(uUser);
+  this.id ++;
   this.users$.next(this.users);
  }  
 
@@ -23,7 +25,7 @@ export class UserService {
   return this.users$.asObservable();
  }
 
-    
-
- 
+ deleteU(id:number): User[]{
+ return this.users = this.users.filter(user => user.id !== id)
+ }
 }

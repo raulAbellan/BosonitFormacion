@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 import { ListComponent } from './crud/list/list.component';
 import { FormComponent } from './crud/form/form.component';
+import { CommunicationServiceService } from './communication/services/communication-service.service';
 
 
 @NgModule({

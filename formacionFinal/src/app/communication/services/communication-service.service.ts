@@ -9,6 +9,7 @@ export class CommunicationServiceService {
 
   //** Llamamos al componente desde el servicio /PARENT USING SERVICE
   public childClass!: ChildComponent;
-  public parentClass!: ParentComponent
+  public parentClass!: ParentComponent;
+  // public childMessage!: string;
   constructor() { }
 }

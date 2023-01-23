@@ -7,12 +7,12 @@ import { CommunicationObservableService } from '../services/communication-observ
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent implements OnInit {
 
   //*PARENT USING INPUT PROPERTY
-  parentMessage: String = new String('');
+  parentMessage: string = '';
   //**CHILD USING OUTPUT PROPERTY
   childMessage: string = '';
 
@@ -21,13 +21,14 @@ export class ParentComponent implements OnInit {
 
   constructor(
     //*Injectamos en el constructor el CommService /PARENT USING SERVICE
-    private _communicationService: CommunicationServiceService,
+    public communicationService: CommunicationServiceService,
     //*Injectamos en el constructor el ObsService
     private _observableService: CommunicationObservableService) { }
 
   ngOnInit() {
     //*compartimos el componente para acceder a el desde el servicio /PARENT USING SERVICE
-    this._communicationService.parentClass = this;
+    this.communicationService.parentClass = this;
+    // this.childMessage = this.communicationService.childMessage;
      //*Nos subscribimos al observable mediante el metodo get que hemos creado
     this._observableService.getFromChild().subscribe((txtObs) => (this.childMessage = txtObs));
 
@@ -37,12 +38,12 @@ export class ParentComponent implements OnInit {
   }
   //*Con el metodo siguiente damos valor a "msg" que sería lo que queremos que aparezca en pantalla /PARENT USING SERVICE
   parentServiceMsg() {
-    this._communicationService.childClass.msg = "PARENT USING SERVICE";
+    this.communicationService.childClass.msg = "PARENT USING SERVICE";
   }
 
   //*Damos valor al parentMessage// PARENT USING INPUT PROPERTY
   inputMsg() {
-    this.parentMessage = new String('PARENT USING INPUT PROPERTY');
+    this.parentMessage = 'PARENT USING INPUT PROPERTY';
 
   }
 
@@ -53,6 +54,8 @@ export class ParentComponent implements OnInit {
   //*A través del metodo observableMsg damos valor al observable //PARENT USING OBSERVABLE
   observableMsg() {
     this._observableService.sendFromParent('PARENT USING OBSERVABLE');
+    // this._observableService.obsFromParent$ = 'PARENT USING OBSERVABLE';
+    // const test = this._observableService.obsFromParentObservable$;
   }
 
 }

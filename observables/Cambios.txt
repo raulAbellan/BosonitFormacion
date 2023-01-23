@@ -1,0 +1,54 @@
+<app-panel-data-empty *ngIf="tableJson.length === 0" [textEmpty]="'emptyText.absenceHeader' | translate" [textEmpty2]="'emptyText.absenceBody' | translate"></app-panel-data-empty>
+
+<app-panel-data-empty *ngIf="tableJson.length === 0" [textEmpty]="'emptyText.employeeHeader' | translate" [textEmpty2]="'emptyText.employeeBody' | translate"></app-panel-data-empty>
+
+
+"emptyText":{
+    "absenceHeader":"No absences with these parameters...",
+    "absenceBody" :"If you can't find the files you're looking for, contact the help desk.",
+    "employeeHeader":"There are no employees by that name...",
+    "employeeBody":"If you cannot find the employee you are looking for contact the help desk."},
+
+
+
+
+    "emptyText":{
+        "absenceHeader":"No exisen ausencias con estos parámetros...",
+        "absenceBody" :"Si no encuentra los registros que busca contacte con el servicio técnico.",
+        "employeeHeader":"No exisen empleados con ese nombre...",
+        "employeeBody":"Si no encuentra el empleado que busca contacte con el servicio técnico."},
+
+
+
+
+
+
+        .notFound {
+            display: flex;
+            flex-direction: row;
+            background-color: #f1f1f1;
+            padding: 6%;
+            margin-top: 8px;
+        }
+        
+        .notFoundImg {
+            max-width: 75px;
+            margin-right: 15px;
+            max-height: 75px;
+            padding-top: 1%;
+        }
+        
+        .notFoundText {
+            display: block;
+            font-weight: bold;
+        }
+
+
+
+        <div class="notFound">
+    <img class="notFoundImg" src="\assets\img\notFound.png" alt="notFoundImg">
+    <div class="notFoundText">
+        <p>{{textEmpty}}</p>
+        <p>{{textEmpty2}}</p>
+    </div>
+</div>

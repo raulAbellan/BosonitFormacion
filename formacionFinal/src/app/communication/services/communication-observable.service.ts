@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,15 +7,23 @@ import { Subject } from 'rxjs';
 export class CommunicationObservableService {
 
   //* Declaramos el subject 
-  obsFromParent = new Subject<string>();
+  private _obsFromParent = new Subject<string>();
 
   //?Creamos el metodo en el que emitimos el mensaje a traves del observable
+  // get obsFromParentObservable$(): Observable<string> {
+  //   return this._obsFromParent.asObservable();
+  // }
+
+  // set obsFromParent$(message: string) {
+  //   this._obsFromParent.next(message);
+  // }
+
   sendFromParent(obsMsg:string){
-    return this.obsFromParent.next(obsMsg)
+    return this._obsFromParent.next(obsMsg)
   }
   //?Declaramos el get para poder subscribirnos desde el elemento hijo
   getFromParent(){
-    return this.obsFromParent.asObservable();
+    return this._obsFromParent.asObservable();
   }
 
   childObs = new Subject<string>();

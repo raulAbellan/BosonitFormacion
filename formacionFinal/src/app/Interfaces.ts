@@ -6,6 +6,7 @@ export interface Country {
 }
 
 export interface User{
+        id?:number,
         name: string,
         pass:string,
         passConfirm:string,
@@ -13,5 +14,4 @@ export interface User{
         check: boolean,
         country:Country,
         city:string
-
 }

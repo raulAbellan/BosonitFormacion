@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import {  Country } from 'src/app/Interfaces';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Country } from 'src/app/Interfaces';
 import { UserService } from '../services/user.service';
+import { ValidatorsService } from '../services/validators.service';
 
 @Component({
   selector: 'app-form',
@@ -9,29 +10,28 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  form: FormGroup;
 
   countries: Country[];
 
+  formUsers: FormGroup = this.fb.group({
+    id: [, []],
+    name: ['', [Validators.required, Validators.pattern('a-zA-Z')]],
+    pass: [, [Validators.required, Validators.minLength(6)]],
+    passConfirm: [, [Validators.required]],
+    email: ['', [Validators.required, Validators.pattern('^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$')]],
+    check: [, []],
+    country: [, []],
+    city: [, []]}, {
+      validators: [this.validation.validatePass('password', 'repeatPassword')]
+    });
 
-  
-
-  constructor(private userService: UserService) {
-    this.form = new FormGroup(
-      {
-        name: new FormControl(),
-        pass: new FormControl(),
-        passConfirm: new FormControl(),
-        email: new FormControl(),
-        check: new FormControl(),
-        country: new FormControl(),
-        city: new FormControl() 
-
-      }
-    );
+  constructor(private userService: UserService,
+              private fb: FormBuilder,
+              private validation: ValidatorsService) {
+   
 
     this.countries = [
-      { name: 'Australia', code: 'AU'},
+      { name: 'Australia', code: 'AU' },
       { name: 'Brazil', code: 'BR' },
       { name: 'China', code: 'CN' },
       { name: 'Egypt', code: 'EG' },
@@ -42,13 +42,19 @@ export class FormComponent {
       { name: 'España', code: 'ES' },
       { name: 'United States', code: 'US' }
     ];
-   
+
+  }
+  
+
+
+  onSubmit() {
+    
+    this.userService.addUser(this.formUsers.value);
+    
+    this.formUsers.reset();    
+
   }
 
-  onSubmit(){
-    this.userService.addUser(this.form.value);
-    this.form.reset();    
-    
-  }
+  
 
 }

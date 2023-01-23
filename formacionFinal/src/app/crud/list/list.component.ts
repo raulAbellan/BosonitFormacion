@@ -16,7 +16,8 @@ export class ListComponent implements OnInit {
     this.userService.getUsers$().subscribe(users => {
       this.userArr = users;  console.log(users);    })
   }
-  onDelete(){
+  deleteUser(id:number):User[]{
+    return this.userArr = this.userService.deleteU(id)
 
 
   }

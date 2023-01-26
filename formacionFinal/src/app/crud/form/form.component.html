@@ -1,51 +1,109 @@
 <div class="gridLateral">
-    <p-card>
-        <h4>Formulario de Registro</h4>
-        <form [formGroup]="formUsers" (ngSubmit)="onSubmit()">
-            <div>
-                <h5>Usuario</h5>
+  <p-card>
+    <h4>Formulario de Registro</h4>
+    <form [formGroup]="formUsers" (ngSubmit)="onSubmit()" autocomplete="off">
+      <div>
+        <h5>Usuario</h5>
 
-                <div>
-                    <div class="p-inputgroup">
-                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-                        <input formControlName="name" type="text" pInputText placeholder=" Nombre de usuario">
-                    </div>
-                </div>
+        <div>
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input
+              formControlName="name"
+              type="text"
+              pInputText
+              placeholder=" Nombre de usuario"
+            />
+          </div>
+          <small
+            *ngIf="invalidField('name')"
+            id="username2-help"
+            class="p-error block"
+            >Debe tener más de 3 caracteres y empezar por una letra</small
+          >
+        </div>
 
-                <h5>Contraseña</h5>
-                <div>
+        <h5>Contraseña</h5>
+        <div>
+          <p-password [toggleMask]="true" formControlName="pass"></p-password>
+        </div>
+        <small
+          *ngIf="invalidField('pass')"
+          id="username2-help"
+          class="p-error block"
+          >La contraseña es demasiado corta.</small
+        >
 
-                    <p-password [toggleMask]="true" formControlName="pass"></p-password>
-                </div>
-                <div>
+        <h5>Confirmar Contraseña</h5>
+        <div>
+          <p-password
+            [toggleMask]="true"
+            formControlName="passConfirm"
+          ></p-password>
+        </div>
+        <small
+          *ngIf="invalidField('passConfirm')"
+          id="username2-help"
+          class="p-error block"
+          >Las contraseñas deben coincidir.</small
+        >
 
-                    <h5>Confirmar Contraseña</h5>
-                    <p-password [toggleMask]="true" formControlName="passConfirm"></p-password>
-                </div>
-                
-                <h5>Correo</h5>
+        <h5>Correo</h5>
 
-                <div class="p-inputgroup">
-                    <span class="p-inputgroup-addon"><i class="pi pi-at"></i></span>
-                    <input formControlName="email" type="text" pInputText placeholder=" Correo" >
-                </div>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-at"></i></span>
+          <input
+            formControlName="email"
+            type="text"
+            pInputText
+            placeholder=" Correo"
+          />
+        </div>
+        <small
+          *ngIf="invalidField('email')"
+          id="username2-help"
+          class="p-error block"
+          >El email debe tener un formato válido.</small
+        >
 
-                <h5>Envíame ofertas promocionales</h5>
-                <p-checkbox formControlName="check" name="groupname" value="false" ></p-checkbox>
-                <h5>País</h5>
-                <p-dropdown [options]="countries" formControlName="country" optionLabel="name" optionValue="name" placeholder="Pais"></p-dropdown>
+        <h5>Envíame ofertas promocionales</h5>
+        <p-checkbox
+          formControlName="check"
+          name="groupname"
+          value="false"
+        ></p-checkbox>
+        <h5>País</h5>
+        <p-dropdown
+          [options]="countries"
+          formControlName="country"
+          optionLabel="name"
+          optionValue="name"
+          placeholder="Pais"
+        ></p-dropdown>
 
-                <h5>Ciudad</h5>
-                <div>
-                    <div class="p-inputgroup">
-                        <span class="p-inputgroup-addon"><i class="pi pi-building"></i></span>
-                        <input formControlName="city" type="text" pInputText placeholder="Ciudad">
-                    </div>
-                </div>
-            </div>
-            <div class="mt-1"> <p-button label="Crear" (click)="onSubmit()"></p-button>
-            </div>
-        </form>
-
-    </p-card>
+        <h5>Ciudad</h5>
+        <div>
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"
+              ><i class="pi pi-building"></i
+            ></span>
+            <input
+              formControlName="city"
+              type="text"
+              pInputText
+              placeholder="Ciudad"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-1">
+        <p-button
+          label="Crear"
+          [disabled]="formUsers.invalid"
+          (click)="onSubmit()"
+        ></p-button>
+      </div>
+    </form>
+  </p-card>
+  <app-list (user)="editUser($event)" [users]="users"></app-list>
 </div>

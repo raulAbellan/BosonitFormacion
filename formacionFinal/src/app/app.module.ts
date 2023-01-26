@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 
 import { DropDownComponent } from './shared/drop-down/drop-down.component';
 
@@ -18,18 +17,17 @@ import { CrudComponent } from './crud/crud.component';
 
 //primeNg
 import { MenubarModule } from 'primeng/menubar';
-import {ButtonModule} from 'primeng/button';
-import {CardModule} from 'primeng/card';
-import {PasswordModule} from 'primeng/password';
-import {CheckboxModule} from 'primeng/checkbox';
-import {TreeSelectModule} from 'primeng/treeselect';
-import {DropdownModule} from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { PasswordModule } from 'primeng/password';
+import { CheckboxModule } from 'primeng/checkbox';
+import { TreeSelectModule } from 'primeng/treeselect';
+import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {TableModule} from 'primeng/table';
-import { ListComponent } from './crud/list/list.component';
+import { TableModule } from 'primeng/table';
 import { FormComponent } from './crud/form/form.component';
-import { CommunicationServiceService } from './communication/services/communication-service.service';
-
+import { ListComponent } from './crud/list/list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,8 +38,8 @@ import { CommunicationServiceService } from './communication/services/communicat
     ParentComponent,
     ChildComponent,
     CrudComponent,
+    FormComponent,
     ListComponent,
-    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -56,10 +54,10 @@ import { CommunicationServiceService } from './communication/services/communicat
     DropdownModule,
     BrowserAnimationsModule,
     TableModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

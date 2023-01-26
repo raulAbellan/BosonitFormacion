@@ -12,5 +12,5 @@ const keyup$ = fromEvent<KeyboardEvent>(document, 'keyup')
 const keyupcode$ = keyup$.pipe(map(event => event.code)
 )
 
-keyupcode$.subscribe(code =>console.log('map:',code)
-)
+
+keyupcode$.subscribe(code =>console.log('map:',code))

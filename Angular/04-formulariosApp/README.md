@@ -1,10 +1,10 @@
-# FormacionFinal
+# 04FormulariosApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4401/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -25,11 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
-
-Para levantar el back, debemos acceder desde la consola en la ubicación del app, en mi caso:
- "C:\Users\raul.abellan\Documents\BosonitFormacion\formacionFinal\src\app"  
-  hacer un start del jsonserver con el comando: "json-server --watch users.json" y comprobar que funciona el servicio, en el caso
-  de que no se levante el servidor, probablemente debemos instalar el json server con el comando: "npm install -g json-server"
-  Si no tenemos crado el archivo json, crear en la misma ruta el user.json

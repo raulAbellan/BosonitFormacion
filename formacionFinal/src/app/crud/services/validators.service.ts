@@ -8,6 +8,7 @@ export class ValidatorsService {
 
   constructor() { }
 
+  
 
   validatePass( pass: string, passConfirm: string){
 

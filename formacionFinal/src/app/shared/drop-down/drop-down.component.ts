@@ -32,6 +32,10 @@ ngOnInit(): void  {
         {
           label: 'Search on type',
           routerLink:'search-on-type'
+        },
+        {
+          label: 'Light Switch',
+          routerLink:'light-switch'
         }]
     }
   ]

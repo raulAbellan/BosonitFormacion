@@ -6,19 +6,18 @@
       type="text"
       name="term"
       [(ngModel)]="term"
-      placeholder="Search {{ filter }}"
+      placeholder="Search {{ activeFilter | titlecase }}"
     />
+    <div class="buttons">
+      <button *ngFor="let filter of filters" 
+      pButton [class.p-button-outlined]="filter!==activeFilter"  (click)="filterActive(filter)" >{{filter | titlecase}}  </button>
+   
+      <button pButton class="p-button-success clean" (click)="clean()">
+        Clean Filter
+      </button>
+    </div>
   </form>
-  <div class="buttons">
-    <button pButton (click)="filterHuman()">Human</button>
-    <button pButton (click)="filterAlien()">Alien</button>
-    <button pButton (click)="filterRobot()">Robot</button>
-    <button pButton (click)="filterAnimal()">Animal</button>
-    <button pButton (click)="filterMithologic()">Mithologic</button>
-    <button pButton class="p-button-success clean" (click)="clean()">
-      Clean Filter
-    </button>
-  </div>
+ 
 </div>
 <p-table [tableStyle]="{ 'min-width': '50rem' }" [value]="characters">
   <ng-template pTemplate="header">

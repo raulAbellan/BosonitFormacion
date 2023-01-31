@@ -16,6 +16,9 @@ import { SearchOnTypeComponent } from './search-on-type/search-on-type.component
 import { CrudComponent } from './crud/crud.component';
 import { FormComponent } from './crud/form/form.component';
 import { ListComponent } from './crud/list/list.component';
+import { LightSwitchComponent } from './light-switch/light-switch.component';
+import { TraficLightComponentComponent } from './light-switch/trafic-light-component/trafic-light-component.component';
+import { ControllerComponentComponent } from './light-switch/controller-component/controller-component.component';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,6 +47,9 @@ import {SelectButtonModule} from 'primeng/selectbutton';
     FormComponent,
     ListComponent,
     SearchOnTypeComponent,
+    LightSwitchComponent,
+    TraficLightComponentComponent,
+    ControllerComponentComponent,
   ],
   imports: [
     BrowserModule,

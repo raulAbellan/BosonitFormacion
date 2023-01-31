@@ -8,70 +8,59 @@ import { RickAndMortyService } from './rick-and-morty.service';
   styleUrls: ['./search-on-type.component.css'],
 })
 export class SearchOnTypeComponent {
-  filter: string = 'all';
+  
+  activeFilter: string = 'all';
+  filters:string[]=['human','alien','robot','animal','mithologic'];
   term: string = '';
   characters!: Result[];
+
+
   constructor(private rAndMService: RickAndMortyService) {}
+  
+  filterActive(filter:string){
+    this.activeFilter = filter;
+  }
   clean() {
-    this.filter = 'all';
-  }
-  filterHuman() {
-    this.filter = 'human';
-  }
-
-  filterAnimal() {
-    this.filter = 'animal';
-  }
-
-  filterMithologic() {
-    this.filter = 'mithologic';
-  }
-
-  filterAlien() {
-    this.filter = 'alien';
-  }
-
-  filterRobot() {
-    this.filter = 'robot';
+    this.activeFilter = 'all';
   }
 
   search() {
-    if (this.filter === 'all') {
+    if (this.activeFilter === 'all') {
       this.rAndMService
         .search(this.term)
         .subscribe((characters: CharacterInfo) => {
           this.characters = characters.results;
           console.log(this.characters);
         });
-    } else if (this.filter === 'human') {
+    } else if (this.activeFilter === 'human') {
       this.rAndMService
         .searchHuman(this.term)
         .subscribe((characters: CharacterInfo) => {
           this.characters = characters.results;
           console.log(this.characters);
         });
-    } else if (this.filter === 'alien') {
+    } else if (this.activeFilter === 'alien') {
       this.rAndMService
         .searchAlien(this.term)
         .subscribe((characters: CharacterInfo) => {
           this.characters = characters.results;
           console.log(this.characters);
         });
-    } else if (this.filter === 'robot') {
+    } else if (this.activeFilter === 'robot') {
       this.rAndMService
         .searchRobot(this.term)
         .subscribe((characters: CharacterInfo) => {
           this.characters = characters.results;
           console.log(this.characters);
         });
-    } else if (this.filter === 'animal') {
+    } else if (this.activeFilter === 'animal') {
       this.rAndMService
         .searchAnimal(this.term)
         .subscribe((characters: CharacterInfo) => {
           this.characters = characters.results;
           console.log(this.characters);
         });
-    } else if (this.filter === 'mithologic') {
+    } else if (this.activeFilter === 'mithologic') {
       this.rAndMService
         .searchMithologic(this.term)
         .subscribe((characters: CharacterInfo) => {

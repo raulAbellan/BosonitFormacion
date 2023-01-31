@@ -1,0 +1,52 @@
+.lights{
+    margin-top: 10px;
+        width: 196px;
+    height: 500px;
+    border: 3px solid rgb(71, 71, 71);
+    background-color: rgb(71, 71, 71);
+}
+.off{
+    margin: auto;
+    margin-top: 5px;
+    border: 3px solid rgb(144, 143, 129);
+    width: 150px;
+    height: 160px;
+    background-color: rgb(144, 143, 129);
+    border-radius: 260px;
+}
+
+.red{
+    margin: auto;
+    margin-top: 5px;
+    border: 3px solid rgb(219, 12, 12);
+    width: 150px;
+    height: 160px;
+    background-color: rgb(219, 12, 12);
+    border-radius: 260px;
+    box-shadow: 10px 5px 15px rgb(156, 27, 27);
+
+}
+
+.yellow{
+    margin: auto;
+    margin-top: 5px;
+    border: 3px solid rgb(219, 209, 12);
+    width: 150px;
+    height: 160px;
+    background-color: rgb(219, 209, 12);
+    border-radius: 260px;
+    box-shadow: 10px 5px 15px rgb(126, 121, 35);
+
+}
+
+.green{
+    margin: auto;
+    margin-top: 5px;
+    border: 3px solid  rgb(6, 111, 43);
+    width: 150px;
+    height: 160px;
+    background-color: rgb(6, 111, 43);
+    border-radius: 260px;
+    box-shadow: 10px 5px 15px rgb(23, 101, 51);
+}
+

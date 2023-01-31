@@ -4,6 +4,7 @@ import { HideComponent } from './hide/hide.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { CrudComponent } from './crud/crud.component';
 import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
+import { LightSwitchComponent } from './light-switch/light-switch.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: 'search-on-type',
     component:SearchOnTypeComponent,
+    pathMatch:'full'
+  },
+  {
+    path: 'light-switch',
+    component:LightSwitchComponent,
     pathMatch:'full'
   },
   {

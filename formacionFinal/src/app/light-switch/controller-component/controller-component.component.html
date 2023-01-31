@@ -1,0 +1,10 @@
+<div class="mt-4">
+  <select  name="select" (change)="colorSelected($event)">
+    <option *ngFor="let color of colors">{{ color }}</option>
+  </select>
+</div>
+<div>
+  <label>On/Off
+    <input  type="checkbox" (change)="isChecked($event)" />
+  </label>
+</div>

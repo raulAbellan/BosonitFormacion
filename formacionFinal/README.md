@@ -32,4 +32,4 @@ Para levantar el back, debemos acceder desde la consola en la ubicación del app
  "C:\Users\raul.abellan\Documents\BosonitFormacion\formacionFinal\src\app"  
   hacer un start del jsonserver con el comando: "json-server --watch users.json" y comprobar que funciona el servicio, en el caso
   de que no se levante el servidor, probablemente debemos instalar el json server con el comando: "npm install -g json-server"
-  Si no tenemos crado el archivo json, crear en la misma ruta el user.json
+  Si no tenemos creado el archivo json, crear en la misma ruta el user.json

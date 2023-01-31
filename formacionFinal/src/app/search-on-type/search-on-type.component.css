@@ -1,0 +1,15 @@
+button{
+    padding: auto;
+    margin: 1rem;
+}
+.imgSize{
+    width: 35%;
+    height: 35%;
+}
+.buttons{
+    display: flex;
+}
+.clean{
+    margin-left: auto;
+    margin-right: 7rem;
+   }

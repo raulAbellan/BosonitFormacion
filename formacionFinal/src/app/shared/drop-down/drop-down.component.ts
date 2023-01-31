@@ -28,6 +28,10 @@ ngOnInit(): void  {
         {
           label: 'Crud',
           routerLink:'crud'
+        },
+        {
+          label: 'Search on type',
+          routerLink:'search-on-type'
         }]
     }
   ]

@@ -1,0 +1,12 @@
+.chart{
+    width:35%;
+    height:30%;
+}
+
+.barChart{
+    
+    display: flex;
+    width: 55%;
+    height: 55%;
+}
+

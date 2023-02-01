@@ -36,6 +36,10 @@ ngOnInit(): void  {
         {
           label: 'Light Switch',
           routerLink:'light-switch'
+        },
+        {
+          label: 'Graphics',
+          routerLink:'graphics'
         }]
     }
   ]

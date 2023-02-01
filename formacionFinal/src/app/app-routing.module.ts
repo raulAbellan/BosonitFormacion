@@ -5,41 +5,47 @@ import { CommunicationComponent } from './communication/communication.component'
 import { CrudComponent } from './crud/crud.component';
 import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
 import { LightSwitchComponent } from './light-switch/light-switch.component';
+import { GraphicsComponent } from './graphics/graphics.component';
 
 const routes: Routes = [
   {
     path: 'hide',
     component: HideComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'communication',
-    component:CommunicationComponent,
-    pathMatch:'full'
+    component: CommunicationComponent,
+    pathMatch: 'full',
   },
   {
     path: 'crud',
-    component:CrudComponent,
-    pathMatch:'full'
+    component: CrudComponent,
+    pathMatch: 'full',
   },
   {
     path: 'search-on-type',
-    component:SearchOnTypeComponent,
-    pathMatch:'full'
+    component: SearchOnTypeComponent,
+    pathMatch: 'full',
   },
   {
     path: 'light-switch',
-    component:LightSwitchComponent,
-    pathMatch:'full'
+    component: LightSwitchComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'graphics',
+    component: GraphicsComponent,
+    pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'hide'
-  }
+    redirectTo: 'hide',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

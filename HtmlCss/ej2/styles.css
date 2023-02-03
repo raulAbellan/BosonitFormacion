@@ -1,3 +1,39 @@
+@media(max-width: 200px){
+    html{
+        font-size: 25%;
+    }
+}
+
+@media(max-width: 400px){
+    html{
+        font-size: 35%;
+    }
+}
+
+@media(max-width: 600px){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media(max-width: 800px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width: 1000px){
+    html{
+        font-size: 65%;
+    }
+}
+@media(max-width: 1200px){
+    html{
+        font-size: 75%;
+    }
+}
+
+
+
 body {
     font-family: 'Hind', sans-serif;
     font-size: 1.8rem;

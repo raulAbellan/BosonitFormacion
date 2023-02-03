@@ -1,0 +1,23 @@
+<h1>{{counter}}</h1>
+<h5>Setup</h5>
+<span class="p-buttonset">
+  
+  <button  pButton pRipple (click)="startCounter()" label="Start" icon="pi "></button>
+  <button  pButton pRipple (click)="pauseCounter()" label="Pause" icon="pi "></button>
+  <button pButton pRipple (click)="reset()"label="Reset" icon="pi "></button>
+</span>
+
+<h5>Count</h5>
+<span class="p-buttonset">
+  <button pButton pRipple (click)="countUpButton()" label="Count up" icon="pi"></button>
+  <button pButton pRipple (click)="countDown()"label="Count Down" icon="pi "></button>
+</span>
+<h5>Set to</h5>
+<input type="number" min="0" pInputNumber [(ngModel)]="setTo"> 
+<span class="ml-2"></span>
+
+<h5>Step</h5>
+<input type="number" min="1" pInputNumber [(ngModel)]="step"> 
+<span class="ml-2"></span>
+
+<span>{{counter}} {{'{' }}"countUp":{{countUp |json}} , "value:" {{setTo}}, "speed":{{speed}}, "step":{{step}} {{'}'}}</span>

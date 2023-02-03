@@ -36,6 +36,7 @@ import {SelectButtonModule} from 'primeng/selectbutton';
 import { GraphicsComponent } from './graphics/graphics.component';
 //CHARTS
 import { NgChartsModule } from 'ng2-charts';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { NgChartsModule } from 'ng2-charts';
     TraficLightComponentComponent,
     ControllerComponentComponent,
     GraphicsComponent,
+    CounterComponent,
     
   ],
   imports: [

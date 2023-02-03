@@ -48,7 +48,7 @@ export class GraphicsComponent implements OnInit {
         data: [],
         label: 'Hospitalized',
         backgroundColor: 'rgba(148,159,177,0.2)',
-        borderColor: 'rgba(148,159,177,1)',
+        borderColor: 'rgba(250, 82, 42,0.8)',
         pointBackgroundColor: 'rgba(148,159,177,1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
@@ -66,18 +66,7 @@ export class GraphicsComponent implements OnInit {
         pointHoverBorderColor: 'rgba(77,83,96,1)',
         fill: 'origin',
       },
-      // {
-      //   data: [],
-      //   label: 'Dead',
-      //   yAxisID: 'y1',
-      //   backgroundColor: 'rgba(255,0,0,0.3)',
-      //   borderColor: 'red',
-      //   pointBackgroundColor: 'rgba(148,159,177,1)',
-      //   pointBorderColor: '#fff',
-      //   pointHoverBackgroundColor: '#fff',
-      //   pointHoverBorderColor: 'rgba(148,159,177,0.8)',
-      //   fill: 'origin',
-      // },
+   
     ],
     labels: [
       '30 Days Ago',
@@ -92,23 +81,14 @@ export class GraphicsComponent implements OnInit {
   public lineChartOptions: ChartConfiguration['options'] = {
     elements: {
       line: {
-        tension: 0.5,
+        tension: 0.8,
       },
     },
     scales: {
       // We use this empty structure as a placeholder for dynamic theming.
       y: {
         position: 'left',
-      },
-      y1: {
-        position: 'right',
-        grid: {
-          color: 'rgba(255,0,0,0.3)',
-        },
-        ticks: {
-          color: 'red',
-        },
-      },
+      }
     },
   };
 

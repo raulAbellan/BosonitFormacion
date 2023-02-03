@@ -6,6 +6,7 @@ import { CrudComponent } from './crud/crud.component';
 import { SearchOnTypeComponent } from './search-on-type/search-on-type.component';
 import { LightSwitchComponent } from './light-switch/light-switch.component';
 import { GraphicsComponent } from './graphics/graphics.component';
+import { CounterComponent } from './counter/counter.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path: 'graphics',
     component: GraphicsComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'counter',
+    component: CounterComponent,
     pathMatch: 'full',
   },
   {

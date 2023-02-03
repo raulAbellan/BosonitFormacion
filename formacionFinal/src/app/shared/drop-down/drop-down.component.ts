@@ -40,6 +40,10 @@ ngOnInit(): void  {
         {
           label: 'Graphics',
           routerLink:'graphics'
+        },
+        {
+          label: 'Counter',
+          routerLink:'counter'
         }]
     }
   ]
